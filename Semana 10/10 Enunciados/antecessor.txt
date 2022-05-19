@@ -1,0 +1,64 @@
+Descrição
+
+Leia N números inteiros e construa uma árvore binária de busca (ABB), ignorando a inserção de chaves repetidas.
+Depois, leia uma sequência de inteiros terminada por EOF e calcule o antecessor para cada chave requisitada. 
+
+O antecessor de i é o nó na sub-árvore esquerda de i com a maior chave, caso exista.
+(Em outras palavras, o antecessor de i é o maior descendente esquerdo de i. Veja o exemplo abaixo.)
+
+// Recebe um ponteiro para um item.
+// Caso exista na arvore, calcula o seu antecessor.
+// Devolve o ponteiro para o antecessor, caso exista, ou NULL caso contrario.
+Item *antecessor (Item *i);
+
+Entrada
+
+A entrada consiste de várias linhas.
+A primeira contém um inteiro positivo N.
+A segunda, contém N inteiros para a construção da ABB.
+As linhas seguintes, contém um inteiro cada.
+A sequência de linhas é terminada por EOF. 
+
+
+
+Saída
+
+Na primeira linha, o seu programa deve imprimir as chaves da árvore "em ordem".
+Nas linhas seguintes, imprima o antecessor para cada chave, caso ela exista na ABB.
+Se a chave não existir na ABB ou se o antecessor não existir, imprima uma mensagem: "Chave nao encontrada." ou "Nao ha antecessor para a chave pesquisada.".
+
+Nas últimas linhas seguintes, deve imprimir uma mensagem "libera: X" após liberar cada item alocado na árvore, onde X é o valor da chave.
+Dica: Para liberar os itens da árvore, use a visita Pós-Ordem. 
+
+
+
+Exemplo 
+
+Entrada: 
+7
+3 2 5 1 4 6 7
+1
+2
+3
+4
+5
+6
+7
+8
+
+Saída:
+Nao ha antecessor para a chave pesquisada.
+Antecessor de 2: 1
+Antecessor de 3: 2
+Nao ha antecessor para a chave pesquisada.
+Antecessor de 5: 4
+Nao ha antecessor para a chave pesquisada.
+Nao ha antecessor para a chave pesquisada.
+Chave nao encontrada.
+libera: 1
+libera: 2
+libera: 4
+libera: 7
+libera: 6
+libera: 5
+libera: 3

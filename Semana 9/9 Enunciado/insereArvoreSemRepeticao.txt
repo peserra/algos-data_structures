@@ -1,0 +1,93 @@
+Descrição
+
+Leia N inteiros e construa uma árvore binária de busca, sem repetir as chaves (ignore a inserção de chaves repetidas).
+
+typedef struct tItem {
+    int chave;
+    struct tItem *pai, *esq, *dir;
+} Item;
+
+typedef struct tArvore {
+    Item *raiz;
+    int quantidade;
+} Arvore;
+
+// Recebe uma chave x.
+// Aloca memoria para um novo item, inicializa campos:
+// chave x e ponteiros todos NULL.
+// Devolve o ponteiro alocado.
+Item *criaItem (int x);
+
+// Aloca memoria para uma arvore.
+// Inicializa arvore vazia: raiz vazia e qtde zero.
+// Devolve o ponteiro alocado.
+Arvore *criaArvoreVazia ();
+
+// Recebe um ponteiro para uma arvore.
+// Libera memoria: libera itens da arvore e finalmente a estrutura da arvore.
+void liberaArvore (Arvore *arvore);
+
+// Recebe um ponteiro para uma arvore.
+// Devolve 1 se arvore vazia, 0 caso contrario.
+int vazia (Arvore *arv);
+
+// Recebe um ponteiro para uma arvore.
+// Imprime o conteudo da arvore "em ordem".
+void imprimir (Arvore *arv);
+
+// Recebe um ponteiro para uma arvore e uma chave x.
+// Insere uma nova chave na arvore.
+// Ignora chaves repetidas.
+void inserir (Arvore *arv, int x);
+
+
+Entrada
+
+A entrada consiste de apenas um caso de teste contendo duas linhas. 
+
+Na primeira linha, há um número inteiro N representando a quantidade de nós da árvore.
+
+Na segunda linha, há N números inteiros separados por um espaço em branco cada, representando as N chaves a serem inseridas na árvore binária de busca.
+
+Restrições:
+
+• 1 <= N <= 500
+
+int main () {
+    int n, i, x;
+    scanf ("%d", &n);
+    Arvore *arv = criaArvoreVazia ();
+    for (i = 0; i < n; i++) {
+        scanf ("%d", &x);
+        inserir (arv, x);
+    }
+    imprimir (arv);
+    liberaArvore (arv);
+    return 0;
+}
+
+
+Saída
+
+Na primeira linha, o seu programa deve imprimir as chaves da árvore "em ordem".
+
+Nas linhas seguintes, deve imprimir uma mensagem "libera: X" após liberar cada item alocado na árvore, onde X é o valor da chave.
+Dica: Para liberar os itens da árvore, use a visita Pós-Ordem.  
+
+
+
+Exemplo 1
+
+Entrada: 
+7
+5 3 7 6 2 4 1
+
+Saída:
+1 2 3 4 5 6 7
+libera: 1
+libera: 2
+libera: 4
+libera: 3
+libera: 6
+libera: 7
+libera: 5

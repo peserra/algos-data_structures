@@ -1,0 +1,95 @@
+Descrição
+
+Faça um programa que implemente uma Lista Dinâmica Encadeada (LDE)
+Entrada
+
+O programa receberá uma sequencia indefinida de comandos no seguinte formato:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere    Descrição
+ I <valor>       Inclusão do valor na Lista
+ R <valor>     Exclusão do valor da Lista
+ B <valor>     Busca do valor na Lista
+ L                   Mostrar a Lista
+
+E VALOR será um natural entre 0 e 100000.
+
+Caso a operação tente incluir um valor que já existe na LDE ou excluir um valor que não existe na LDE a operação deve ser ignorada, sem exibir nenhuma mensagem de aviso.
+
+Na busca de um valor, se o valor existir na LDE exiba a mensagem “SIM”, caso contrário exiba “NAO”, sem aspas duplas, sem acento e em maiúsculo.
+
+Na exibição da lista, entre cada elemento da LDE deixe um espaço em branco para separá-los, contudo após o último elemento salte uma linha, sem deixar espaço em branco.
+
+Dica: Para fazer a leitura da entrada de dados, você seguir a sugestão abaixo... note que os PRINTFs são apenas ilustrativos, para mostrar que os dados foram lidos corretamente.
+
+#include <stdio.h>
+int main () {
+    char op;
+    int x;
+    while (scanf (" %c", &op) != EOF) {  // leitura com um espaco em branco antes de %c
+        switch (op) {
+            case 'I': scanf ("%d", &x);
+                      printf ("[%c %d]\n", op, x);
+                      break;
+            case 'R': scanf ("%d", &x);
+                      printf ("[%c %d]\n", op, x);
+                      break;
+            case 'B': scanf ("%d", &x);
+                      printf ("[%c %d]\n", op, x);
+                      break;
+            case 'L': printf ("[%c]\n", op);
+                      break;
+        }
+    }
+    return 0;
+}
+
+
+Saída
+
+A saída do programa consiste de varias linhas, conforme os comandos L e B dados na entrada.
+Observe o exemplo a seguir.
+
+
+
+Exemplo
+
+Entrada: 
+I 50
+I 30
+I 70
+I 90
+I 10
+I 20
+I 40
+I 80
+I 60
+L
+B 10
+I 50
+B 50
+R 50
+B 50
+L
+R 90
+R 10
+L
+R 80
+R 20
+L
+R 40
+R 50
+R 60
+L
+
+Saída: 
+10 20 30 40 50 60 70 80 90
+SIM
+SIM
+NAO
+10 20 30 40 60 70 80 90
+20 30 40 60 70 80
+30 40 60 70
+30 70

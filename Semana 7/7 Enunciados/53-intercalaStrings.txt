@@ -1,0 +1,37 @@
+Descrição
+
+Faça um algoritmo que aloque duas strings S1 e S2 com seus tamanhos N1 e N2, então receba os N1 caracteres da string S1 e os N2 caracteres da string S2. 
+É garantido que os caracteres em S1 e S2 estão em ordem lexicografica. 
+Então seu algoritmo deve construir uma terceira string, Sr, com a intercalação das strings S1 e S2 de forma que Sr ordenada. 
+Seu programa deve ser Linear, ou seja O(n), onde n é a quantidade de caracteres. 
+
+Entrada
+
+A entrada consiste de quatro linhas.
+A primeira linha contem um número inteiro positivo N1, representando a quantidade de caracteres da string S1. 
+Na segunda linha da entrada haverá uma sequencia de N1 caracteres, representando os caracteres da string S1. 
+É garantido que esses caracteres estão ordenados lexicograficamente de forma crescente.
+A terceira linha contem outro número inteiro positivo N2, representando a quantidade de caracteres da string S2. 
+Na quarta linha da entrada haverá uma sequencia de N2 caracteres, representando os caracteres da string S2. 
+É garantido que esses caracteres estão ordenados lexicograficamente de forma crescente.
+Restrições:
+• 0 < N1, 2 <= 10000
+• S1 e S2 são compostas por letras minúsculas.
+
+Saída
+
+A saída deverá contar uma única linha contendo a string Sr, resultante da intercalação das strings S1 e S2, lembrando que Sr também deve estar ordenada lexicograficamente de forma crescente. 
+Após a impressão da string Sr, quebre uma linha.
+
+
+Exemplo 
+
+Entrada: 
+15
+bcdfghjklmntvxz
+5
+aeiou
+
+Saída:
+abcdefghijklmnotuvxz
+

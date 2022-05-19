@@ -1,0 +1,44 @@
+Descrição
+
+Faça um programa que receba um vetor de inteiros de tamanho N e ordene os seus elementos usando o algoritmo de seleção (Selection Sort).
+(Veja um material interessante sobre ordenação em: https://www.ime.usp.br/~pf/algoritmos/aulas/ordena.html).
+
+A ordenação por seleção usa a seguinte estratégia:
+- primeiro, seleciona o menor elemento do vetor;
+- depois o segundo menor, depois o terceiro menor, e assim por diante.
+
+Entrada
+
+O programa terá apenas um caso de teste. 
+A primeira linha do caso de teste contem um inteiro N, 0 < N <= 10000, representando o tamanho do vetor.
+A segunda linha do caso de teste contem N números inteiros separados por um espaço em branco cada. 
+
+Saída
+
+O programa gera várias linhas de saída.
+A cada troca que o algoritmo realizar (após a execução das linhas 6 a 8), você deve imprimir todo o vetor, com seus valores separados por espaço em branco.
+
+A última linha exibe a mensagem "Total de IFs executados: X", onde X é a quantidade de vezes que a linha 4 foi executada.
+(Observe que o contador deve ficar FORA do IF, pois queremos contabilizar o total de EXECUÇÕES do IF; não é o total de vezes que a condição foi satisfeita.)
+
+Vale lembrar que antes do primeiro elemento do vetor não há nada impresso, assim como não há nada impresso depois do último elemento do vetor, apenas uma quebra de linha.
+Após a impressão da última linha da saída, salte uma linha.
+
+Exemplo 1
+
+Entrada: 
+10
+54 12 2 90 4 78 55 21 2 48
+
+Saída: 
+2 12 54 90 4 78 55 21 2 48
+2 2 54 90 4 78 55 21 12 48
+2 2 4 90 54 78 55 21 12 48
+2 2 4 12 54 78 55 21 90 48
+2 2 4 12 21 78 55 54 90 48
+2 2 4 12 21 48 55 54 90 78
+2 2 4 12 21 48 54 55 90 78
+2 2 4 12 21 48 54 55 90 78
+2 2 4 12 21 48 54 55 78 90
+Total de IFs executados: 45
+

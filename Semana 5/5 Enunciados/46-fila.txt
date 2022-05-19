@@ -1,0 +1,77 @@
+Descrição
+
+Faça um programa que implemente uma Fila Dinâmica
+
+Entrada
+
+O programa receberá como entrada uma sucessão indefinida de comandos no seguinte formato:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere      Descrição
+ E valor            Inclusão do Valor na Fila
+ D                  Exclusão do Valor na Fila
+ M                  Exibir os valores da Fila
+
+E VALOR será um natural entre 0 e 100000.
+
+Caso a operação tente excluir um valor de uma Fila Vazia, a operação deve ser ignorada, sem exibir nenhuma mensagem de aviso.
+
+Na exibição da fila, entre cada elemento da fila, deixe um espaço em branco para separá-los.
+Após o último elemento, salte uma linha, sem deixar espaço em branco.
+
+
+
+Saída
+
+A saída do programa consistira de várias linhas, conforme os comandos de exibição e de remoção da fila.
+Observe o exemplo a seguir.
+
+
+
+Exemplo
+
+Entrada: 
+E 10
+E 20
+E 30
+M
+E 40
+E 50
+M
+D
+M
+D
+M
+D
+D
+M
+E 60
+E 70
+M
+D
+M
+D
+M
+D
+M
+D
+M
+
+Saída: 
+10 20 30
+10 20 30 40 50
+<10>
+20 30 40 50
+<20>
+30 40 50
+<30>
+<40>
+50
+50 60 70
+<50>
+60 70
+<60>
+70
+<70>

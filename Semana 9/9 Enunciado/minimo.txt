@@ -1,0 +1,53 @@
+Descrição
+
+Leia N números inteiro e construa uma árvore binária de busca (ignorar a inserção de chaves repetidas). 
+
+Percorra a árvore e mostre a menor chave contida na árvore (buscar recursivamente pelo "filho mais à esquerda").
+
+// Recebe um ponteiro para uma arvore binaria de busca.
+// Devolve um ponteiro para o item com a menor chave da arvore binaria de busca:
+// voce deve percorrer a arvore pelos "filhos a esquerda".
+// Assume que a arvore nao esta vazia.
+Item *minimo (Arvore *arv);
+
+Entrada
+
+A entrada consiste de apenas um caso de teste contendo 2 linhas.
+
+A primeira linha contém um número inteiro N representando a quantidade de nós da árvore.
+
+Na segunda linha, haverá N valores inteiros separados por um espaço em branco cada, representando cada uma das chaves a serem inseridas na árvore binária de busca.
+
+Restrições:
+
+• 1 <= N <= 500
+
+
+Saída
+
+Na primeira linha, o seu programa deve imprimir as chaves da árvore "em ordem".
+
+Na segunda linha, imprima "Menor chave: X", onde X é o valor da menor chave obtida pela busca, descendo a árvore pelos "filhos à esquerda".
+
+Nas linhas seguintes, deve imprimir uma mensagem "libera: X" após liberar cada item alocado na árvore, onde X é o valor da chave.
+Dica: Para liberar os itens da árvore, use a visita Pós-Ordem.  
+
+
+
+Exemplo 
+
+Entrada: 
+7
+3 2 1 5 6 7 4
+
+Saída:
+1 2 3 4 5 6 7
+Menor chave: 1
+libera: 1
+libera: 2
+libera: 4
+libera: 7
+libera: 6
+libera: 5
+libera: 3
+

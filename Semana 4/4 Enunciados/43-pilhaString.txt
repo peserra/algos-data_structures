@@ -1,0 +1,68 @@
+Descrição
+
+Implemente uma estrutura de dados do tipo pilha estática que armazenará strings
+
+Entrada
+
+A primeira linha da entrada consiste de um número inteiro N, 0 < N <= 1000000, representando o tamanho da lista de itens da pilha.
+Em seguida haverá uma sucessão indefinida de linhas no seguinte de comandos sobre a pilha que podem ser um dos seguintes:
+
+Comando    Descrição
+
+E  <Valor>    Empilha o Valor.
+D                   Desempilha um Valor.
+T                    Exibe o item que está no topo da pilha.
+X                   Exibe os valores da pilha, do topo para a base, separados por espaço em branco entre os itens.
+B                   Exibe os valores da pilha, da base para o topo, separados por espaço em branco entre os itens.
+
+E VALOR será uma string.
+Caso a operação tente empilhar em uma pilha cheia, ignore a ação. 
+Faça o mesmo caso a operação tente desempilhar um elemento de uma pilha vazia.
+
+Dica1: A entrada das operações termina com o marcador de final de arquivo (EOF).
+
+Dica2: você pode assumir que cada string tem no máximo 99 caracteres, ou seja, você pode usar um vetor de chars de tamanho 100.
+
+Dica3: você deve incluir a biblioteca string.h para executar a função strcpy() para copiar o conteúdo de uma string.
+
+
+Saída
+
+A saída consistirá de várias linhas de acordo com as impressões da pilha que são informadas na entrada. 
+Após a impressão dos elementos da pilha, sempre salte uma linha.
+
+
+
+Exemplo1
+
+Entrada: 
+5
+D
+E lvrqjjwm
+D
+E aorhknjatldjt
+T
+E xlkll
+D
+E mtoqytfoftfahy
+D
+D
+D
+E jghtne
+D
+T
+T
+X
+D
+E iogwdpfrxzycwljrt
+E ddjfejsbmalkgszrub
+B
+B
+E qeqxndbcbo
+E rapzaulwpbtdm
+E ebwyfwhzmy
+
+Saída: 
+aorhknjatldjt
+iogwdpfrxzycwljrt ddjfejsbmalkgszrub
+iogwdpfrxzycwljrt ddjfejsbmalkgszrub

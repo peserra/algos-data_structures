@@ -1,0 +1,56 @@
+Descrição
+
+Leia N números inteiros e construa uma árvore binária de busca. 
+
+Em seguida, calcule a altura da árvore construída. 
+
+Assuma que a árvore dada na entrada não é vazia.
+
+
+
+Entrada
+
+A entrada consiste de um caso de teste com duas linhas. 
+
+Na primeira linha haverá um número inteiro N representando a quantidade de nós da árvore binária de busca.
+
+A segunda linha terá N valores inteiros separados por um espaço em branco cada, representando os N nós da árvore binária de busca.
+
+Caso se tente inserir um valor que já existe na árvore binária de busca, essa operação deve ser ignorada.
+
+Restrições:
+
+• 1 <= N <= 500
+
+
+
+Saída
+
+Seu programa deve imprimir uma única linha com um valor inteiro, representando a altura da árvore binária de busca construída. 
+
+Após a impressão do valor, salte uma linha.
+
+
+
+Exemplo 1
+
+Entrada: 
+7
+3 2 5 1 4 6 7
+
+Saída:
+3
+
+
+
+
+Exemplo 2
+
+Entrada: 
+13
+15 10 25 7 12 20 31 2 8 14 35 1 5
+
+
+Saída:
+4
+

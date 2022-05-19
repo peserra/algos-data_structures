@@ -1,0 +1,66 @@
+Descrição
+
+Leia N números inteiro e construa uma árvore binária de busca (ignore a inserção de chaves repetidas). 
+
+Percorra a árvore e mostre a maior chave contida na árvore.
+
+// Recebe um ponteiro para uma arvore binaria de busca.
+// Devolve um ponteiro para o item com a maior chave da arvore binaria de busca:
+// voce deve percorrer a arvore pelos "filhos a direita".
+// Assume que a arvore nao esta vazia.
+Item *maximo (Arvore *arv);
+
+Entrada
+
+A entrada consiste de apenas um caso de teste contendo 2 linhas.
+
+A primeira linha contém um número inteiro N representando a quantidade de nós da árvore.
+
+Na segunda linha haverá N valores inteiros separados por um espaço em branco cada, representando cada uma das chaves a serem inseridas na árvore binária de busca.
+
+Restrições:
+
+• 1 <= N <= 500
+
+int main () {
+    int n, i, x;
+    scanf ("%d", &n);
+    Arvore *arv = criaArvoreVazia ();
+    for (i = 0; i < n; i++) {
+        scanf ("%d", &x);
+        inserir (arv, x);
+    }
+    imprimir (arv);
+    Item *it = maiorChave (arv);
+    printf ("Maior chave: %d\n", it->chave);
+    liberaArvore (arv);
+    return 0;
+}
+
+Saída
+
+Na primeira linha, o seu programa deve imprimir as chaves da árvore "em ordem".
+
+Na segunda linha, imprima "Maior chave: X", onde X é o valor da maior chave obtida pela busca, descendo a árvore pelos "filhos à direita".
+
+Nas linhas seguintes, deve imprimir uma mensagem "libera: X" após liberar cada item alocado na árvore, onde X é o valor da chave.
+Dica: Para liberar os itens da árvore, use a visita Pós-Ordem.  
+
+
+
+Exemplo 
+
+Entrada: 
+7
+3 2 1 5 6 7 4
+
+Saída:
+1 2 3 4 5 6 7
+Maior chave: 7
+libera: 1
+libera: 2
+libera: 4
+libera: 7
+libera: 6
+libera: 5
+libera: 3

@@ -1,0 +1,66 @@
+Descrição
+
+Faça um programa que implemente uma Fila Estática Circular
+
+Entrada
+
+O programa receberá como entrada um número natural N, 0 <N ≤ 1000, representando o tamanho da fila.
+Em seguida haverá uma sucessão indefinida de comandos no seguinte formato:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere    Descrição
+E Valor          Inclusão do Valor na Fila.
+D                   Exclusão do Valor na Fila
+
+E VALOR será um natural.
+Caso a operação tente incluir um valor em uma Fila Cheia ou excluir um valor de uma Fila Vazia a operação deve ser ignorada, sem exibir nenhuma mensagem de aviso.
+
+Dica: A entrada das operações termina com o marcador de final de arquivo (EOF).
+
+Saída
+
+A saída do programa consistirá de várias linhas.
+A cada operação de exclusão de itens da fila, o valor desenfileirado deve ser exibido.
+Após a impressão do último valor, salte uma linha.
+
+
+
+Exemplo1
+
+Entrada: 
+5
+E 10
+E 20
+E 30
+E 40
+E 50
+E 60
+E 70
+D
+D
+E 80
+E 90
+E 100
+E 110
+E 120
+D
+D
+D
+D
+D
+E 130
+E 140
+D
+D
+
+Saída: 
+10
+20
+30
+40
+80
+90
+130
+140

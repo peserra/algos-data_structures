@@ -1,0 +1,58 @@
+Descrição
+
+Faça um programa que receba um vetor de inteiros de tamanho N e ordene os seus elementos usando o algoritmo bolha (Bubble Sort).
+Entrada
+
+O programa terá apenas um caso de teste. 
+A primeira linha do caso de teste contem um inteiro N, 0 < N <= 10000, representando o tamanho do vetor.
+A segunda linha do caso de teste contem N números inteiros separados por um espaço em branco cada. 
+
+
+Saída
+
+O programa gera várias linhas de saída.
+A cada troca que o algoritmo realizar (após a execução das linhas 10 a 12), você deve imprimir todo o vetor, com seus valores separados por espaço em branco.
+
+A penúltima linha exibe a mensagem "Total de IFs executados: X", onde X é a quantidade de vezes que a linha 8 foi executada.
+(Observe que o contador deve ficar FORA do IF, pois queremos contabilizar o total de EXECUÇÕES do IF; não é o total de vezes que a condição foi satisfeita.)
+
+A última linha exibe a mensagem "Total de IFs satisfeitos: Y", onde Y é a quantidade de vezes que a condição da linha 8 foi satisfeita.
+(Observe que agora sim este contador Y deve ficar dentro do IF, pois queremos contabilizar o total de vezes que entramos dentro do IF.)
+Vale lembrar que antes do primeiro elemento do vetor, não há nada impresso, assim como não há nada impresso depois do último elemento do vetor, apenas uma quebra de linha.
+Após a impressão da última linha da saída, salte uma linha.
+
+
+Exemplo 1
+
+Entrada: 
+10
+54 12 2 90 4 78 55 21 2 48
+
+Saída: 
+12 54 2 90 4 78 55 21 2 48
+12 2 54 90 4 78 55 21 2 48
+12 2 54 4 90 78 55 21 2 48
+12 2 54 4 78 90 55 21 2 48
+12 2 54 4 78 55 90 21 2 48
+12 2 54 4 78 55 21 90 2 48
+12 2 54 4 78 55 21 2 90 48
+12 2 54 4 78 55 21 2 48 90
+2 12 54 4 78 55 21 2 48 90
+2 12 4 54 78 55 21 2 48 90
+2 12 4 54 55 78 21 2 48 90
+2 12 4 54 55 21 78 2 48 90
+2 12 4 54 55 21 2 78 48 90
+2 12 4 54 55 21 2 48 78 90
+2 4 12 54 55 21 2 48 78 90
+2 4 12 54 21 55 2 48 78 90
+2 4 12 54 21 2 55 48 78 90
+2 4 12 54 21 2 48 55 78 90
+2 4 12 21 54 2 48 55 78 90
+2 4 12 21 2 54 48 55 78 90
+2 4 12 21 2 48 54 55 78 90
+2 4 12 2 21 48 54 55 78 90
+2 4 2 12 21 48 54 55 78 90
+2 2 4 12 21 48 54 55 78 90
+Total de IFs executados: 45
+Total de IFs satifeitos: 24
+

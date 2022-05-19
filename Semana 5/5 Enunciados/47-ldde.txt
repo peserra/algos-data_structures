@@ -1,0 +1,81 @@
+Descrição
+
+Faça um programa que implemente uma Lista Dinâmica Duplamente Encadeada (LDDE)
+
+Entrada
+
+O programa receberá uma sequencia indefinida de comandos no seguinte formato:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere    Descrição
+ I <valor>       Inclusão do valor na Lista
+ E <valor>     Exclusão do valor da Lista
+ M                  Mostrar a Lista, do ínicio para o fim.
+ R                   Mostrar a Lista, do fim para o ínicio.
+
+
+E VALOR será um natural.
+Os comandos M e R exibem um valor após o outro separados por espaço em branco. 
+Há um espaço em branco após o último valor exibido. 
+Após exibir os valores da LDDE sempre pule uma linha, mesmo que não tenha valor a ser exibido.
+
+Caso a operação tente incluir um valor que já existe na LDDE ou excluir um valor que não existe na LDDE, a operação deve ser ignorada, sem exibir nenhuma mensagem de aviso.
+
+
+
+Saída
+
+A saída do programa consistirá em várias linhas, onde em cada linha será impresso os valores da LDDE de acordo com o comando informado.
+
+
+
+Exemplo
+
+Entrada: 
+I 5
+I 1
+I 9
+M
+I 3
+I 7
+R
+I 2
+I 4
+I 8
+I 6
+R
+M
+E 1
+E 9
+M
+E 5
+E 3
+E 7
+R
+E 2
+E 8
+E 6
+M
+R
+E 9
+E 10
+E 4
+M
+R
+I 5
+E 5
+M
+R
+
+Saída: 
+1 5 9 
+9 7 5 3 1 
+9 8 7 6 5 4 3 2 1 
+1 2 3 4 5 6 7 8 9 
+2 3 4 5 6 7 8 
+8 6 4 2 
+4
+4
+

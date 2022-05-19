@@ -1,0 +1,37 @@
+Descrição
+
+Elabore um programa receba uma string bipartida Su, ou seja, ela contém duas substrings: a primeira de tamanho N e a segunda de tamanho M, ambas substrings estão ordenadas lexicografica de forma crescente. 
+
+Seu programa deve reconstruir Su intercalando ambas substrings de forma que a string Su resultante também esteja ordenada lexicograficamente de forma crescente. 
+
+Entrada
+
+A entrada consiste de duas linhas.
+
+Na primeira linha haverá dois números inteiros, N e M, sendo N a quantidade de caracteres da primeira substring de Su e M a quantidade de caracteres da segunda substring. 
+
+Na segunda linha haverá uma sequencia de N+M caracteres, representando os caracteres da string Su.
+Vale lembrar que, ambas estão ordenadas lexicograficamente de forma crescente; além disso, note que a primeira substring de Su se inicia em no índice 0 e que a segunda substring começa no indice imediatamente após terminar a primeira substring de Su.
+
+Restrições:
+
+• 0 < N, M <= 10000
+
+• 1 < N+M <= 20000
+
+• Todos os caracteres de Su são letras minúsculas.
+
+Saída
+
+A saída consiste de apenas uma linha com a string Su resultante da intercalação de suas substrings. 
+
+Após a impressão da string Su resultante, quebre uma linha.
+
+Exemplo 
+
+Entrada:
+5 11 
+aeioubcdfghjklmn
+
+Saída:
+abcdefghijklmnou

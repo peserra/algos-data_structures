@@ -1,0 +1,42 @@
+Descrição
+
+Faça um programa que receba vários vetores de inteiros e determine se eles estão ou não ordenados.
+
+Entrada
+
+O programa terá vários casos de teste. 
+Cada caso de teste é composto por até 2 linhas.
+A primeira linha do caso de teste contem um inteiro N, 0 <= N <= 10000, representando o tamanho do vetor.
+A segunda linha do caso de teste contém N números inteiros separados por um espaço em branco cada. 
+Atenção: A segunda linha pode não existir.
+A entrada termina com EOF.
+
+Saída
+
+O programa gera várias linhas de saída, uma para cada vetor informado.
+Caso o vetor esteja ordenado, imprima uma letra S.
+Caso contrário, imprima uma letra N.
+Após a impressão de cada letra, inclusive da última, salte uma linha.
+
+Exemplo
+
+Entrada: 
+10
+0 1 2 3 4 5 6 7 8 9
+6
+9 5 0 2 4 1
+8
+1 2 3 4 5 6 7 0
+10
+9 8 7 6 5 4 3 2 1 0
+0
+7
+62 74 96 103 540 599 853
+
+Saída: 
+S
+N
+N
+S
+S
+S

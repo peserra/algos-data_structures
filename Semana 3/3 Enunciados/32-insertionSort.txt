@@ -1,0 +1,71 @@
+Descrição
+
+Faça um programa que receba um vetor de inteiros de tamanho N e ordene os seus elementos usando o algoritmo de inserção (Insertion Sort).
+O algoritmo é iterativo.
+No começo de cada iteração, temos um trecho já ordenado.
+A ideia é inserir um novo elemento na sua posição de ordenação, como em um jogo de baralho.
+
+Entrada
+
+O programa terá apenas um caso de teste. 
+A primeira linha do caso de teste contém um inteiro N, 0 < N <= 10000, representando o tamanho do vetor.
+A segunda linha do caso de teste contem N números inteiros separados por um espaço em branco cada. 
+É garantido que não há repetição dos valores do vetor.
+
+Saída
+
+O programa gerá várias linhas de saída.
+
+A cada execução da linha 6 para deslocar um elemento para a direita, você deve imprimir todo o vetor, com seus valores separados por espaço em branco (note que A[i] e A[i+1] estarão com mesmos valores, pois o elemento A[i] foi "deslocado" para a direita em A[i+1]).
+
+A cada execução da linha 9 para inserir a chave na posição correta, você deve imprimir todo o vetor, com seus valores separados por espaço em branco (note que chave é inserida na posição resultante após os deslocamentos para a direita).
+
+A última linha exibe "Deslocamentos: X", onde X é a quantidade de vezes que a linha 6 foi executada.
+
+Vale lembrar que antes do primeiro elemento do vetor não há nada impresso, assim como não há nada impresso depois do último elemento do vetor, apenas uma quebra de linha.
+Após a impressão da última linha da saída, salte uma linha.
+
+
+Exemplo 
+
+Entrada: 
+10
+54 12 2 90 4 78 55 21 1 48
+
+Saída: 
+54 54 2 90 4 78 55 21 1 48
+12 54 2 90 4 78 55 21 1 48
+12 54 54 90 4 78 55 21 1 48
+12 12 54 90 4 78 55 21 1 48
+2 12 54 90 4 78 55 21 1 48
+2 12 54 90 4 78 55 21 1 48
+2 12 54 90 90 78 55 21 1 48
+2 12 54 54 90 78 55 21 1 48
+2 12 12 54 90 78 55 21 1 48
+2 4 12 54 90 78 55 21 1 48
+2 4 12 54 90 90 55 21 1 48
+2 4 12 54 78 90 55 21 1 48
+2 4 12 54 78 90 90 21 1 48
+2 4 12 54 78 78 90 21 1 48
+2 4 12 54 55 78 90 21 1 48
+2 4 12 54 55 78 90 90 1 48
+2 4 12 54 55 78 78 90 1 48
+2 4 12 54 55 55 78 90 1 48
+2 4 12 54 54 55 78 90 1 48
+2 4 12 21 54 55 78 90 1 48
+2 4 12 21 54 55 78 90 90 48
+2 4 12 21 54 55 78 78 90 48
+2 4 12 21 54 55 55 78 90 48
+2 4 12 21 54 54 55 78 90 48
+2 4 12 21 21 54 55 78 90 48
+2 4 12 12 21 54 55 78 90 48
+2 4 4 12 21 54 55 78 90 48
+2 2 4 12 21 54 55 78 90 48
+1 2 4 12 21 54 55 78 90 48
+1 2 4 12 21 54 55 78 90 90
+1 2 4 12 21 54 55 78 78 90
+1 2 4 12 21 54 55 55 78 90
+1 2 4 12 21 54 54 55 78 90
+1 2 4 12 21 48 54 55 78 90
+Deslocamentos: 25
+

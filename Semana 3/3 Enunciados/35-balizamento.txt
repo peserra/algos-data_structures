@@ -1,0 +1,100 @@
+Descrição
+
+Em um torneio de natação, existem diversas provas, cada prova pode conter diversas séries. 
+Entretanto, o tamanho de uma série é limitado pela quantidade de raias disponíveis na piscina. 
+
+Para distribuir os atletas nas raias da piscina e nas diversas séries, usa-se um procedimento conhecido como balizamento.
+O balizamento distribui os atletas pelas raias da piscina, baseando-se no seu melhor tempo.
+
+A lista de atletas inscritos para cada prova, ordenado por tempo de balizamento, do menor para o maior, é chamada de start list e é usada para separar os atletas por séries e por raias.
+Quando um atleta não informa o tempo de balizamento durante a inscrição, o atleta é balizado com o pior tempo (para indicar “sem tempo”) e estes atletas “sem tempo” recebem as piores posições do balizamento.
+
+No Brasil, o tipo de prova mais comum é a Final Direta, em que o atleta executa a prova uma única vez e é classificado de acordo com o tempo obtido.
+Para este tipo de prova, os melhores tempos de balizamento são alocados para competir nas últimas séries.
+
+Agora resta compreender como os atletas são alocados nas raias da piscina. 
+Sabe-se que as melhores raias são as centrais, portanto, elas são alocadas para os melhores tempos de balizamento daquela série. 
+
+Deste modo, deve-se determinar qual é a raia central da piscina e atribuí-la ao atleta com o melhor tempo de balizamento da série.
+Depois da raia central, a primeira da direita vai para o atleta com o segundo melhor tempo.
+A primeira da esquerda vai para o atleta com o terceiro melhor tempo de balizamento e assim por diante, alternando entre direita e esquerda. 
+
+Além disso, há uma exceção que deve ser observada no momento do balizamento:
+“Quanto houver duas ou mais séries em uma prova, deve-se ter no mínimo 3 nadadores em uma série.”
+
+Desta forma, em uma prova com mais de uma série, é proibido realizar uma série com menos de 3 atletas.
+Por exemplo, aplicando-se a exceção da regra, uma prova com 10 atletas em uma piscina de 8 raias, é proibido ter uma série com 2 atletas e uma segunda com 8 atletas.
+
+Neste caso, o atleta com o pior tempo de balizamento da segunda série é realocado na primeira série.
+Desta forma, tem-se 3 atletas na primeira série: os 3 com os piores tempos de balizamento.
+A segunda e última série contará com 7 atletas: os 7 de melhores tempos de balizamento.
+
+Veja um exemplo, um torneio realizado em uma piscina com 8 raias para uma prova de 100 metros, estilo Borboleta Feminino, com 10 atletas inscritas.
+Considere as atletas sem tempo de balizamento com tempo 00:00:00.
+
+
+Sua tarefa é construir um programa que, dada a quantidade de raias de uma piscina, a quantidade de atletas e seus referidos tempos de balizamento, mostre quantas séries serão realizadas e quais atletas participarão dessas séries, bem como as suas respectivas raias para a realização da prova.
+
+Entrada
+
+A entrada consiste de várias linhas.
+Na primeira linha, seu programa receberá um inteiro N, representando a quantidade de raias da piscina onde será realizada a prova.
+
+Na segunda linha, um número inteiro M, representando a quantidade de atletas que se inscreveram para a prova.
+Nas M linhas seguintes, 4 informações separadas por um espaço em branco (NOME, MIN, SEG e CENT):
+
+• NOME será uma sequência de caracteres, representando o nome do atleta (apenas letras de A a Z, maiúsculas e minúsculas).
+• MIN, SEG e CENT, serão números inteiros representando o tempo de balizamento do atleta (considere MIN = 0, SEG = 0 e CENT = 0 para atleta sem tempo de balizamento).
+
+Restrições:
+• 0 < N <= 30
+• 0 < M <= 5000
+• NOME terá comprimento máximo de 99 caracteres
+• 0 <= MIN <= 59, 0 <= SEG <= 59 e 0 <= CENT <= 99 
+
+
+Saída
+
+A primeira linha da saída deve conter um número inteiro S, representando a quantidade de séries que a prova deverá ter, seguido da palavra series quando S > 1 ou serie quando S = 1.
+
+Depois, o programa deverá imprimir S blocos, sendo S a quantidade de séries para aquela prova, cada bloco será composto de várias linhas. 
+A primeira linha do bloco deve identificar a série (1a., 2a., etc). 
+
+As linhas seguintes devem descrever o número da raia e o atleta que deverá competir naquela raia. 
+Siga a ordem de atribuição das raias, das melhores para as piores, ou seja, numa piscina de 7 raias, a ordem que você deve apresentar é: Raia 4, Raia 5, Raia 3, Raia 6, Raia 2, Raia 7 e finalmente Raia 1.
+
+Observe os exemplos e siga-os estritamente, colocando os espaços, pontos e dois pontos.
+
+Após a impressão da última raia da última série, salte uma linha.
+
+Exemplo 1
+
+Entrada: 
+8
+10
+Maria 1 5 14
+Julia 0 58 32
+Lucia 2 0 0
+Cris 0 55 43
+Vitoria 1 0 41
+Isabela 1 15 22
+Helena 1 0 39
+Ana 0 0 0
+Leticia 0 55 10
+Floriana 0 52 8
+
+Saída: 
+2 series
+1a. serie:
+Raia 4: Isabela
+Raia 5: Lucia
+Raia 3: Ana
+2a. serie:
+Raia 4: Floriana
+Raia 5: Leticia
+Raia 3: Cris
+Raia 6: Julia
+Raia 2: Helena
+Raia 7: Vitoria
+Raia 1: Maria
+

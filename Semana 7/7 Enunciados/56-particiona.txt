@@ -1,0 +1,34 @@
+Descrição
+
+Faça um algoritmo que aloque um vetor V com tamanho n e receba os n valores para guardar no vetor. 
+
+Reconstrua o vetor V particionado pelo elemento contido no índice p ("Pivô"). 
+
+Seu programa deve ser O(n). 
+
+Entrada
+
+A entrada consiste de dois valores: n e p, tal que 0 < n <= 1000000 e 0 <= p < 1000000, onde n é o tamanho da entrada, enquanto p representa o índice do "pivô", que promoverá o particionamento da coleção de elementos. 
+
+Em seguida haverá n valores inteiros.
+
+
+
+Saída
+
+A saída consistirá da impressão de uma linha com o novo índice p' do "pivô" no vetor rearranjado.
+Na segunda linha, os elementos do vetor rearranjado, ou seja:
+V[0...p'-1] <= V[p'] <=  V[p'+1...n-1]
+
+
+
+Exemplo1 
+
+Entrada: 
+12 7
+5 7 56 97 2 3 67 34 68 32 98 89
+
+Saída:
+5
+5 7 2 3 32 34 67 89 68 56 98 97
+

@@ -1,0 +1,85 @@
+Descrição
+
+Faça um programa que implemente uma Lista Estática Sequencial (LES) de chars
+
+Entrada
+
+O programa receberá como entrada um número natural N, 0 < N <= 30000, que representa o tamanho da lista:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere    Descrição
+I  <Valor>      Inclusão do Valor na Fila.
+R <Valor>      Exclusão do Valor na Fila.
+B <Valor>      Busca se Valor está na Lista. Caso o elemento esteja na lista imprime “SIM”, caso contrário “NAO”.
+M                   Mostra os valores da Lista, separados por um espaço em branco e salta uma linha após o último elemento.
+
+
+E VALOR será um caractere (CHAR).
+Caso a operação tente incluir um valor que já existe na LES ou excluir um valor que não existe na LES a operação deve ser ignorada, sem exibir nenhuma mensagem de aviso.
+
+Dica1: A entrada das operações termina com o marcador de final de arquivo (EOF).
+
+Dica2: Para ler a entrada corretamente, devemos usar " %c" (com um espaço em branco antes do %c) para ler um char. 
+
+
+
+Saída
+
+A saída do programa consistira de várias linhas conforme os comandos informados na entrada.
+Não se esqueça de saltar uma linha após a última impressão da resposta.
+
+
+
+Exemplo
+
+Entrada: 
+10
+I K
+I S
+I D
+I H
+I L
+I K
+I Y
+I B
+I H
+I S
+I A
+I Z
+M
+B A
+B B
+B C
+B D
+B E
+B F
+R K
+R H
+R S
+M
+B H
+B S
+B K
+B X
+R A
+R Z
+R V
+R A
+M
+
+Saída: 
+A B D H K L S Y Z
+SIM
+SIM
+NAO
+SIM
+NAO
+NAO
+A B D L Y Z
+NAO
+NAO
+NAO
+NAO
+B D L Y

@@ -1,0 +1,3 @@
+Mesmos algoritmos que os das semanas anteriores, porém a ordenação deve ser
+feita de forma estável, ou seja, respeitar a ordem de entrada se os numeros a
+serem ordenados forem iguais

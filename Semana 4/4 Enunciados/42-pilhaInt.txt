@@ -1,0 +1,70 @@
+Descrição
+
+Implemente uma estrutura de dados do tipo pilha estática que armazenará números inteiros
+
+Entrada
+
+A primeira linha da entrada consiste de um número inteiro N, 0 < N <= 1000000, representando o tamanho da lista de itens da pilha.
+Em seguida, haverá uma sucessão indefinida de linhas no seguinte de comandos sobre a pilha que podem ser um dos seguintes:
+
+Comando    Descrição
+
+E  <Valor>    Empilha o Valor.
+D                   Desempilha um Valor.
+T                   Exibe o item que está no topo da pilha.
+X                   Exibe os valores da pilha, do topo para a base, valores separados por um espaço em branco.
+B                   Exibe os valores da pilha, da base para o topo, valores separados por um espaço em branco.
+
+E VALOR será um inteiro.
+Caso a operação tente empilhar em uma pilha cheia, ignore a ação. 
+Faça o mesmo caso a operação tente desempilhar um elemento de uma pilha vazia.
+
+Dica: A entrada das operações termina com o marcador de final de arquivo (EOF).
+
+
+
+Saída
+
+A saída consistirá de várias linhas de acordo com as impressões da pilha que são informadas na entrada. 
+Após a impressão dos elementos da pilha, sempre salte uma linha.
+
+
+
+Exemplo1
+
+Entrada: 
+5
+X
+D
+E 501
+X
+E 853
+D
+E 373
+E 155
+B
+E 181
+T
+T
+B
+E 495
+D
+E 563
+E 77
+T
+T
+E 230
+E 529
+E 607
+E 125
+E 513
+
+Saída: 
+501
+501 373 155
+181
+181
+501 373 155 181
+563
+563
+

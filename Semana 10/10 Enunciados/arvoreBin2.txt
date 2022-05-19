@@ -1,0 +1,109 @@
+Descrição
+
+Faça um programa que implemente uma Árvore Binária de Busca conforme o padrão de entrada a seguir.
+
+*Caractere de Comando* | *Descricao*
+insert <valor>	     | Inclusao de <valor> na arvore
+delete <valor>	     | Exclusão de <valor> na arvore
+pre-order		     | Mostra a arvore em pré ordem
+in-order		     	 | Mostra a arvore em ordem
+post-order		     | Mostra a arvore em pós ordem
+
+
+Entrada
+
+O programa receberá como entrada várias linhas no formato:
+
+
+
+Valor será um natural diferente de 0.
+
+Considere as seguintes observações em sua implementação:
+
+• Caso a operação tente incluir um valor que já existe na árvore, ignore a operação.
+
+• Caso a operação tente excluir um valor inexistente na árvore, ignore a operação.
+
+• Caso a operação de exclusão recaia sobre um nó com dois filhos, eleja como substituto o sucessor.
+
+• A cada operação de exclusão bem sucedida, mostre o valor da chave excluída e salte uma linha.
+
+int main () {
+    char op[20];
+    int x;
+    Arvore *arv = criaArvoreVazia ();
+    while (scanf ("%s", op) != EOF) {
+        if (strcmp (op, "insert") == 0) {
+            scanf ("%d", &x);
+            inserir (arv, x);
+        }
+        else if (strcmp (op, "delete") == 0) {
+            scanf ("%d", &x);
+            if (remover (arv, x)) {
+                printf ("%d\n", x);
+            }
+        }
+        else if (strcmp (op, "pre-order") == 0) {
+            imprimirPreOrdem (arv);
+        }
+        else if (strcmp (op, "in-order") == 0) {
+            imprimirInOrdem (arv);
+        }
+        else if (strcmp (op, "post-order") == 0) {
+            imprimirPosOrdem (arv);
+        }
+    }
+    liberaArvore (arv);
+    return 0;
+}
+Dica: Não esquecer de incluir "string.h" para usar o comando strcmp().
+
+
+
+Saída
+
+A saída do programa consistirá em várias linhas, onde em cada linha será a impressão dos valores no percurso solicitado e os valores das chaves excluídas com sucesso. 
+
+Antes de finalizar o programa, salte uma linha.
+
+
+
+Exemplo 
+
+Entrada: 
+insert 77
+insert 70
+insert 83
+insert 67
+insert 73
+insert 80
+insert 87
+pre-order
+insert 65
+insert 90
+insert 78
+in-order
+delete 80
+delete 77
+post-order
+delete 67
+delete 73
+delete 80
+in-order
+delete 87
+delete 78
+post-order
+
+Saída:
+77 70 67 73 83 80 87 
+65 67 70 73 77 78 80 83 87 90 
+80
+77
+65 67 73 70 90 87 83 78 
+67
+73
+65 70 78 83 87 90 
+87
+78
+65 70 90 83
+

@@ -1,0 +1,42 @@
+Descrição
+
+Escreva um programa que receba vários vetores de inteiros e gere um heap de máximo (a maior chave fica na raiz da árvore).
+
+Entrada
+
+O programa terá vários casos de testes.
+
+A primeira linha de cada caso de teste é um número inteiro N, 0 < N <= 100, representando o tamanho do vetor. 
+
+Na linha seguinte, serão dados N inteiros separados por um espaço em branco cada, representando o vetor que deve ser transformado em um heap de máximo.
+
+A entrada termina quando N = 0.
+
+Saída
+
+O programa gera como saída várias linhas, uma para cada caso de entrada. 
+
+Cada caso de entrada gera apenas uma linha contendo os valores dos vetores transformados em heap de máximo. 
+
+Após a impressão de cada vetor heap, quebre uma linha, inclusive após a última entrada.
+
+
+
+Exemplo1 
+
+Entrada: 
+10
+9 65 12 7 21 5 7 46 52 10
+5
+43 56 23 65 23
+8
+89 42 65 23 65 98 23 12
+4
+56 32 78 23
+0
+
+Saída:
+65 52 12 46 21 5 7 9 7 10
+65 56 23 43 23
+98 65 89 23 42 65 23 12
+78 32 56 23

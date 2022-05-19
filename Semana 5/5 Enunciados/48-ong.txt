@@ -1,0 +1,62 @@
+Descrição
+
+Um novo site de busca chamado Ong (Ongnotgoogle) armazena todas as palavras procuradas em uma lista duplamente encadeada. 
+A referida lista é mantida ordenada pelo ranking de consultas das expressões, ou seja, a expressão mais procurada é a primeira da lista. 
+Além disso, cada vez que uma expressão é consultada no site, se ela não consta da lista ela é acrescentada ao final da lista. 
+Por outro lado, se ela é encontrada, e a sua quantidade de consultas ultrapassa quem está a sua frente, então ela deve “ganhar uma ou várias posições” na lista, ou seja, deve trocar de posição com o(s) nó(s) a sua frente.
+
+Faça um programa que implemente a lista dinâmica duplamente encadeada das palavras procuradas no site de busca Ong.
+
+
+
+Entrada
+
+O programa terá apenas um caso de teste contendo todas as palavras procuradas no site. 
+As palavras procuradas são compostas apenas por caracteres minúsculos e têm comprimento máximo de 100 caracteres. 
+A entrada termina com EOF.
+
+
+
+Saída
+
+A saída do programa consistirá de várias linhas, onde em cada linha será impressa a palavra buscada, seguido de um espaço em branco e a quantidade de vezes que a palavra foi procurada no site entre colchetes. 
+Após a impressão das informações, inclusive da última palavra, salte uma linha.
+
+
+
+Exemplo
+
+Entrada: 
+Palmeiras
+Corinthians
+Santos
+Flamengo
+Fluminense
+Palmeiras
+Santos
+Santos
+Cruzeiro
+Bahia
+Cruzeiro
+Ceara
+Cruzeiro
+Cruzeiro
+Botafogo
+Chapecoense
+Chapecoense
+Chapecoense
+Chapecoense
+Chapecoense
+
+Saída: 
+Chapecoense [5]
+Cruzeiro [4]
+Santos [3]
+Palmeiras [2]
+Corinthians [1]
+Flamengo [1]
+Fluminense [1]
+Bahia [1]
+Ceara [1]
+Botafogo [1]
+

@@ -1,0 +1,116 @@
+Descrição
+
+Leia N números inteiros e construa uma árvore binária de busca; depois, leia M chaves que deverão ser removidas da árvore binária de busca. 
+
+Caso a chave a ser inserida já exista na árvore, ignore a inclusão. 
+Caso o nó a ser removido não esteja na árvore, ignore a remoção. 
+Caso o nó a ser removido tenha dois filhos, então o substitua pelo seu sucessor.
+
+Após realizar todas as remoções, mostre a árvore binária de busca através do percurso pré-ordem.
+
+typedef struct tItem {
+    int chave;
+    struct tItem *pai, *esq, *dir;
+} Item;
+
+typedef struct tArvore {
+    Item *raiz;
+    int quantidade;
+} Arvore;
+
+// Recebe uma chave x.
+// Aloca memoria para um novo item, inicializa campos:
+// chave x e ponteiros todos NULL.
+// Devolve o ponteiro alocado.
+Item *criaItem (int x);
+
+// Aloca memoria para uma arvore.
+// Inicializa arvore vazia: raiz vazia e qtde zero.
+// Devolve o ponteiro alocado.
+Arvore *criaArvoreVazia ();
+
+// Recebe um ponteiro para uma arvore.
+// Libera memoria: libera itens da arvore e finalmente a estrutura da arvore.
+void liberaArvore (Arvore *arvore);
+
+// Recebe um ponteiro para uma arvore.
+// Devolve 1 se arvore vazia, 0 caso contrario.
+int vazia (Arvore *arv);
+
+// Recebe um ponteiro para uma arvore.
+// Imprime o conteudo da arvore em "pre-ordem".
+void imprimir (Arvore *arv);
+
+// Recebe um ponteiro para uma arvore e uma chave x.
+// Insere uma nova chave na arvore.
+// Ignora chaves repetidas.
+void inserir (Arvore *arv, int x);
+
+// Recebe um ponteiro para um item.
+// Caso exista na arvore, calcula o seu sucessor.
+// Devolve o ponteiro para o sucessor, caso exista, ou NULL caso contrario.
+Item *sucessor (Item *i);
+
+// Recebe um ponteiro para uma arvore e uma chave x.
+// Remove a chave x da arvore, caso exista.
+// Ignora chaves inexistentes.
+// Caso 1: remove uma folha
+// Caso 2: o item removido tem apenas 1 unico filho
+// Caso 3: o item removido tem 2 filhos e deve ser substituido pelo sucessor.
+void remover (Arvore *arv, int x);
+
+Entrada
+A entrada consiste de apenas um caso de teste composto por 4 linhas. 
+
+Na primeira linha, haverá um número inteiro N representando a quantidade de nós da árvore binária de busca.
+A segunda linha contém N valores inteiros separados por um espaço em branco cada, representando as N chaves a serem inseridas na árvore binária de busca.
+
+A terceira linha possui um número inteiro M representado a quantidade de operações de remoção que serão efetivadas. 
+E a quarta linha da entrada é composta por M valores inteiros separados por um espaço em branco, representando as M chaves que serão removidas da árvore binária de busca.
+
+Caso uma chave que já exista na árvore seja inserida novamente, a operação deve ser ignorada. 
+Da mesma forma, se houver uma tentativa de remoção de uma chave inexistente na árvore a operação, também deve ser ignorada. 
+
+Restrições:
+
+• 1 <= N <= 500 
+
+• 1 <= M <= N
+
+
+
+Saída
+
+Seu programa deve imprimir todas as chaves remanescentes na árvore binária de busca a partir de um percurso em pré-ordem. 
+Os valores separados por um espaço em branco cada.
+O último valor é seguido de um espaço em branco e de um pula linha, respectivamente.
+
+int main () {
+    int n, m, i, x;
+    scanf ("%d", &n);
+    Arvore *arv = criaArvoreVazia ();
+    for (i = 0; i < n; i++) {
+        scanf ("%d", &x);
+        inserir (arv, x);
+    }
+    scanf ("%d", &m);
+    for (i = 0; i < m; i++) {
+        scanf ("%d", &x);
+        remover (arv, x);
+    }
+    imprimir (arv);
+    liberaArvore (arv);
+    return 0;
+}
+
+
+Exemplo 
+
+Entrada: 
+7
+3 2 5 1 4 6 7
+2
+3 5
+
+Saída:
+4 2 1 6 7 

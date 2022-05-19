@@ -1,0 +1,72 @@
+Descrição
+
+Faça um programa que implemente uma Árvore Binária de Busca conforme o padrão de entrada a seguir.
+
+*Caractere de Comando* | *Descricao*
+insert <valor>	     | Inclusao de <valor> na arvore
+delete <valor>	     | Exclusão de <valor> na arvore
+pre-order		     | Mostra a arvore em pré ordem
+in-order		     | Mostra a arvore em ordem
+post-order		| Mostra a arvore em pós ordem
+
+
+
+Entrada
+
+O programa receberá como entrada várias linhas no formato:
+
+
+
+Valor será um caractere maiúsculo.
+
+Considere as seguintes observações em sua implementação:
+
+• Caso a operação tente incluir um valor que já existe na árvore, inclua-o na subárvore direita do nó com a mesma chave.
+
+• Caso a operação tente excluir um valor inexistente na árvore, ignore a operação.
+
+• Caso a operação de exclusão recaia sobre um nó com dois filhos, eleja como substituto o sucessor.
+
+
+
+Saída
+
+A saída do programa consistirá em várias linhas, onde em cada linha será a impressão dos valores no percurso solicitado. 
+
+Antes de finalizar o programa, salte uma linha.
+
+
+
+Exemplo 
+
+Entrada: 
+insert M
+insert F
+insert S
+insert C
+insert I
+insert P
+insert W
+pre-order
+insert A
+insert Z
+insert N
+in-order
+delete P
+delete M
+post-order
+delete C
+delete I
+delete P
+in-order
+delete W
+delete N
+post-order
+
+Saída:
+M F C I S P W 
+A C F I M N P S W Z 
+A C I F Z W S N 
+A F N S W Z 
+A F Z S
+

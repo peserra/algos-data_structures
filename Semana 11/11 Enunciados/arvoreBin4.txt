@@ -1,0 +1,96 @@
+Descrição
+
+Faça um programa que implemente uma Árvore Binária de Busca conforme o padrão de entrada a seguir.
+
+*Caractere de Comando* | *Descricao*
+insert <valor>	     | Inclusao de <valor> na arvore
+delete <valor>	     | Exclusão de <valor> na arvore
+pre-order		     | Mostra a arvore em pré ordem
+in-order		     | Mostra a arvore em ordem
+post-order		| Mostra a arvore em pós ordem
+
+
+Entrada
+
+O programa receberá como entrada várias linhas no formato:
+
+
+
+Valor será uma palavra qualquer, ou seja uma sequencia de caracteres.
+Dica: Você pode assumir que as sequencias de caracteres são menores do que 20 caracteres.
+
+Considere as seguintes observações em sua implementação:
+
+• Para inclusão das palavras na árvore binária de busca, você deve realizar uma operação com a palavra para obter um número inteiro que será usado como chave para inclusão. Você deverá descobrir que operação é essa.
+
+• Caso a operação tente incluir um valor que já existe na árvore, ignore a operação.
+
+• Caso a operação tente excluir um valor inexistente na árvore, ignore a operação.
+
+• Caso a operação de exclusão recaia sobre um nó com dois filhos, eleja como substituto o sucessor.
+
+• Após a impressão dos valores em algum dos percursos solicitados, salte uma linha.
+
+
+
+Saída
+
+A saída do programa consistirá em várias linhas, onde cada linha será a impressão da chave entre colchetes, seguido de um espaço em branco e a palavra correspondente. 
+
+Antes de finalizar o programa, salte uma linha.
+
+
+
+Exemplo 
+
+Entrada: 
+insert banco
+insert dados
+insert software
+insert algoritmos
+insert mouse
+insert monitor
+pre-order
+insert teclado
+insert estrutura
+insert arvore
+in-order
+delete arvore
+delete software
+post-order
+delete algoritmos
+delete monitor
+delete arvore
+pre-order
+
+Saída:
+[515]:banco
+[523]:dados
+[875]:software
+[553]:mouse
+[776]:monitor
+[1089]:algoritmos
+
+[515]:banco
+[523]:dados
+[553]:mouse
+[655]:arvore
+[732]:teclado
+[776]:monitor
+[875]:software
+[1007]:estrutura
+[1089]:algoritmos
+
+[732]:teclado
+[776]:monitor
+[553]:mouse
+[1089]:algoritmos
+[1007]:estrutura
+[523]:dados
+[515]:banco
+
+[515]:banco
+[523]:dados
+[1007]:estrutura
+[553]:mouse
+[732]:teclado

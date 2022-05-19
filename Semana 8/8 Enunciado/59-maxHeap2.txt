@@ -1,0 +1,110 @@
+Descrição
+
+Esta atividade é para te ajudar a ter um melhor entendimento das operações básicas de heap de máximo. 
+
+Você receberá requisições de inserção, remoção e impressão.
+
+Entrada
+
+A primeira linha contém um inteiro positivo representando o tamanho do vetor do heap a ser alocado.
+
+A seguir, o programa receberá uma sequência indefinida de comandos no seguinte formato:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere    Descrição
+ I <valor>       Inserção do valor no Heap
+ R <valor>     Remoção do valor do Heap
+ E                   Extrai (remove) a chave máxima do Heap e imprime o seu valor entre [ ] 
+ P                   Imprime os elementos do heap separados por espaço em branco
+
+E VALOR será um inteiro.
+
+
+Saída
+
+A cada requisição do tipo 3, mostre o valor mínimo e salte uma linha.
+
+Exemplo 
+
+Entrada: 
+10
+I 50
+P
+I 30
+P
+I 70
+P
+I 90
+P
+I 10
+P
+I 20
+P
+I 40
+P
+I 80
+P
+I 60
+P
+I 50
+P
+E
+P
+R 50
+P
+E
+P
+E
+P
+R 50
+P
+E
+P
+E
+P
+E
+P
+E
+P
+E
+P
+I 111
+P
+I 222
+P
+I 5
+P
+
+Saída:
+50
+50 30
+70 30 50
+90 70 50 30
+90 70 50 30 10
+90 70 50 30 10 20
+90 70 50 30 10 20 40
+90 80 50 70 10 20 40 30
+90 80 50 70 10 20 40 30 60
+90 80 50 70 50 20 40 30 60 10
+[90]
+80 70 50 60 50 20 40 30 10
+80 70 40 60 50 20 10 30
+[80]
+70 60 40 30 50 20 10
+[70]
+60 50 40 30 10 20
+60 30 40 20 10
+[60]
+40 30 10 20
+[40]
+30 20 10
+[30]
+20 10
+[20]
+10
+[10]
+111
+222 111
+222 111 5

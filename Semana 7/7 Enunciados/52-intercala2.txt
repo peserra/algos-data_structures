@@ -1,0 +1,49 @@
+Descrição
+
+Elabore um programa que aloque apenas um vetor Vu de tamanho q1 + q2. 
+Carregue da posição 0 até a posição q1-1 os q1 valores, e da posição q1 até q1+q2-1 os q2 valores.
+Reconstrua Vu de forma ordenada com o uso de um vetor auxiliar Vaux de tamanho q1 + q2. 
+
+Entrada
+
+A entrada consiste de dois número positivo q1 e q2, sendo 0 < q1,2 <= 500000, representando a quantidade de entradas do programa. 
+Seguido de q1+q2 linhas, onde nas q1 primeiras linhas estão os q1 valores e nas demais q2 linhas estão os q2 valores. 
+Esses valores são naturais k, 0 <= k <= 999999. 
+E ainda, dentro do mesmo bloco é garantido que o número k, representado na linha q, é menor que o número que está em q+1 e maior que ou igual ao que está em q-1. 
+Ou seja: kq-1 <= kq < kq+1 para todo q.
+
+Saída
+
+A saída deverá ser todos os q1+q2 valores das duas entradas intercalados e impressos de forma crescente.
+
+Exemplo 
+
+Entrada: 
+5
+7
+1
+3
+5
+7
+21
+0
+2
+4
+6
+8
+10
+12
+
+Saída: 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+10
+12
+21

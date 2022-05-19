@@ -1,0 +1,90 @@
+Descrição
+
+Leia N números inteiros e construa uma árvore binária de busca (ABB), ignorando a inserção de chaves repetidas.
+Depois, leia uma sequência de inteiros terminada por EOF e calcule o sucessor para cada chave requisitada. 
+
+O sucessor de i é o nó na sub-árvore direita de i com a menor chave, caso exista.
+(Em outras palavras, o sucessor de i é o menor descendente direito de i. Veja o exemplo abaixo.)
+
+// Recebe um ponteiro para um item.
+// Caso exista na arvore, calcula o seu sucessor.
+// Devolve o ponteiro para o sucessor, caso exista, ou NULL caso contrario.
+Item *sucessor (Item *i);
+
+Entrada
+
+A entrada consiste de várias linhas.
+A primeira contém um inteiro positivo N.
+A segunda, contém N inteiros para a construção da ABB.
+As linhas seguintes, contém um inteiro cada.
+A sequência de linhas é terminada por EOF. 
+
+int main () {
+    int n, i, x;
+    scanf ("%d", &n);
+    Arvore *arv = criaArvoreVazia ();
+    for (i = 0; i < n; i++) {
+        scanf ("%d", &x);
+        inserir (arv, x);
+    }
+    while (scanf ("%d", &x) != EOF) {
+        Item *it = buscaPosicao (arv, x);
+        if (it != NULL && it->chave == x) {
+            Item *suc = sucessor (it);
+            if (suc != NULL) {
+                printf ("Sucessor de %d: %d\n", x, suc->chave);
+            }
+            else {
+                printf ("Nao ha sucessor para a chave pesquisada.\n");
+            }
+        }
+        else {
+            printf ("Chave nao encontrada.\n");
+        }
+    }
+    liberaArvore (arv);
+    return 0;
+}
+
+Saída
+
+Na primeira linha, o seu programa deve imprimir as chaves da árvore "em ordem".
+Nas linhas seguintes, imprima o sucessor para cada chave, caso ela exista na ABB.
+Se a chave não existir na ABB ou se o sucessor não existir, imprima uma mensagem: "Chave nao encontrada." ou "Nao ha antecessor para a chave pesquisada.".
+
+Nas últimas linhas seguintes, deve imprimir uma mensagem "libera: X" após liberar cada item alocado na árvore, onde X é o valor da chave.
+Dica: Para liberar os itens da árvore, use a visita Pós-Ordem. 
+
+
+
+Exemplo 
+
+Entrada: 
+7
+3 2 5 1 4 6 7
+1
+2
+3
+4
+5
+6
+7
+8
+
+Saída:
+Nao ha sucessor para a chave pesquisada.
+Nao ha sucessor para a chave pesquisada.
+Sucessor de 3: 4
+Nao ha sucessor para a chave pesquisada.
+Sucessor de 5: 6
+Sucessor de 6: 7
+Nao ha sucessor para a chave pesquisada.
+Chave nao encontrada.
+libera: 1
+libera: 2
+libera: 4
+libera: 7
+libera: 6
+libera: 5
+libera: 3
+

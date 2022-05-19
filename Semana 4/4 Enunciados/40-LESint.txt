@@ -1,0 +1,82 @@
+Descrição
+
+Faça um programa que implemente uma Lista Estática Sequencial (LES) de números inteiros
+Entrada
+
+O programa receberá como entrada um número natural N, 0 < N <= 30000, que representa o tamanho da lista:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere    Descrição
+I  <Valor>      Inclusão do Valor na Fila.
+R <Valor>      Exclusão do Valor na Fila.
+B <Valor>      Busca se Valor está na Lista. Caso o elemento esteja na lista imprime “SIM”, caso contrário “NAO”.
+M                   Mostra os valores da Lista, separados por um espaço em branco e salta uma linha após o último elemento.
+
+
+E VALOR será um natural.
+Caso a operação tente incluir um valor que já existe na LES ou excluir um valor que não existe na LES a operação deve ser ignorada, sem exibir nenhuma mensagem de aviso.
+
+Dica: A entrada das operações termina com o marcador de final de arquivo (EOF).
+
+
+Saída
+
+A saída do programa consistira de várias linhas conforme os comandos informados na entrada.
+Não se esqueça de saltar uma linha após a última impressão da resposta.
+
+
+
+Exemplo
+
+Entrada: 
+10
+I 50
+I 80
+I 20
+I 30
+I 60
+I 90
+I 50
+I 10
+I 40
+I 80
+I 70
+I 100
+M
+B 10
+B 15
+B 20
+B 50
+B 90
+B 66
+R 50
+R 10
+R 100
+M
+B 90
+B 50
+B 40
+B 60
+R 40
+R 60
+R 50
+R 66
+M
+
+Saída: 
+10 20 30 40 50 60 70 80 90 100
+SIM
+NAO
+SIM
+SIM
+SIM
+NAO
+20 30 40 60 70 80 90
+SIM
+NAO
+SIM
+SIM
+20 30 70 80 90
+

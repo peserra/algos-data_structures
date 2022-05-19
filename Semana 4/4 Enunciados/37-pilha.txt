@@ -1,0 +1,87 @@
+Descrição
+
+Implemente uma estrutura de dados do tipo pilha que armazenará números inteiros
+
+Dica: Não esqueça de incluir a biblioteca stdlib.h para os comandos malloc() e free().
+
+
+
+Entrada
+
+A primeira linha da entrada consiste de um número inteiro N, 0 < N ≤ 1000000, representando o tamanho da lista de itens da pilha.
+Em seguida haverá uma sucessão indefinida de linhas no seguinte de comandos sobre a pilha que podem ser um dos seguintes:
+
+Comando Comportamento
+E valor        Empilha o valor na pilha, onde valor será um inteiro.
+D                 Desempilha um valor da pilha.
+T                  Exibe cada item da pilha do topo para a base, um por linha.
+B                  Exibe cada item da pilha da base para o topo, um por linha.
+
+Caso a operação tente empilhar em uma pilha cheia, ignore a ação.
+Faça o mesmo caso a operação tente desempilhar um elemento de uma pilha vazia.
+
+Dica: para ler a entrada corretamente, devemos usar " %c" para ler cada operação, por exemplo, veja o programa abaixo que lê a entrada e imprime o que foi lido na saída:
+#include <stdio.h>
+int main () {
+    char op;
+    int n, x;
+    scanf ("%d", &n); // tamanho alocado para a pilha
+    printf ("[%d]\n", n);
+    while (scanf (" %c", &op) != EOF) {
+        switch (op) {
+            case 'E': scanf ("%d", &x);
+                      printf ("[%c %d]\n", op, x);
+                      break;
+            case 'D': printf ("[%c]\n", op);
+                      break;
+            case 'T': printf ("[%c]\n", op);
+                      break;
+            case 'B': printf ("[%c]\n", op);
+                      break;
+        }
+    }
+    return 0;
+}
+
+
+Saída
+
+A saída consistirá de várias linhas de acordo com as impressões da pilha que são informadas na entrada.
+Sempre após a impressão dos elementos da pilha salte uma linha.
+
+Exemplo
+
+Entrada: 
+10
+E 10
+E 20
+E 30
+E 40
+E 50
+T
+D
+D
+D
+B
+E 10
+E 20
+T
+D
+D
+B
+
+Saída: 
+50
+40
+30
+20
+10
+10
+20
+20
+10
+20
+10
+10
+20
+

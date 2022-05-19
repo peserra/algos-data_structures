@@ -1,0 +1,55 @@
+Descrição
+
+Leia N inteiros e construa uma árvore binária de busca (ABB), sem repetir as chaves (ignore a inserção de chaves repetidas).
+Implemente as 3 maneiras de visitar os nós de uma ABB: pré-ordem, in-ordem e pós-ordem.
+
+Entrada
+
+A entrada consiste de duas linhas. 
+Na primeira linha, há um número inteiro N representando a quantidade de nós da árvore.
+Na segunda linha, há N números inteiros separados por um espaço em branco cada, representando as N chaves a serem inseridas na árvore binária de busca.
+
+int main () {
+    int n, i, x;
+    scanf ("%d", &n);
+    Arvore *arv = criaArvoreVazia ();
+    for (i = 0; i < n; i++) {
+        scanf ("%d", &x);
+        inserir (arv, x);
+    }
+    if (!vazia (arv)) {
+        printf ("Pre-ordem: ");
+        imprimePreOrdem (arv->raiz);
+        printf ("\nIn-ordem: ");
+        imprimeInOrdem (arv->raiz);
+        printf ("\nPos-ordem: ");
+        imprimePosOrdem (arv->raiz);
+        printf ("\n");
+    }
+    liberaArvore (arv);
+    return 0;
+}
+
+
+Saída
+
+A saída é composta por três linhas.
+Na primeira, temos a impressão das chaves de acordo com a visita pré-ordem.
+Na segunda, de acordo com a visita in-ordem.
+Finalmente, a terceira de acordo com a visita pós-ordem.
+
+As chaves são impressas com um espaço entre os valores.
+O último valor de cada linha é seguido de um espaço em branco e de um pula linha.
+
+
+
+Exemplo 
+
+Entrada: 
+13
+15 10 25 7 12 20 31 2 8 14 35 1 5
+
+Saída:
+Pre-ordem: 15 10 7 2 1 5 8 12 14 25 20 31 35
+In-ordem: 1 2 5 7 8 10 12 14 15 20 25 31 35
+Pos-ordem: 1 5 2 8 7 14 12 10 20 35 31 25 15

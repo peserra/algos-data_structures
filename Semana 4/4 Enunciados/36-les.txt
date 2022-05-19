@@ -1,0 +1,45 @@
+Descrição
+
+Faça um programa que implemente uma Lista Estática Sequencial (LES)
+Entrada
+
+O programa receberá como entrada um número natural q, 0 < q ≤ 30000, seguido de q linhas, com comandos no seguinte formato:
+OPERAÇÃO VALOR
+
+Onde OPERAÇÃO será um dos seguintes caracteres:
+
+Caractere            Descrição
+       I                       Inclusão do Valor na Lista
+       E                      Exclusão do Valor na Lista
+
+E VALOR será um natural.
+Caso a operação tente incluir um valor que já existe na LES, ou excluir um valor que não existe na LES, a operação deve ser ignorada, sem exibir nenhuma mensagem de aviso.
+
+Dica: para ler a entrada corretamente, devemos usar " %c" para ler cada operação, por exemplo, veja o programa abaixo que lê a entrada e imprime o que foi lido na saída:
+
+
+Saída
+
+A saída do programa consistirá entre 0 e q linhas, com a impressão dos elementos da lista após executar todas as q operações.
+A impressão deve ser feita de um elemento por linha. do primeiro até o último da lista. 
+Não se esqueça de saltar uma linha após a impressão do último elemento .
+
+Exemplo1
+
+Entrada: 
+10
+I 15
+I 9
+I 3
+I 80
+I 30
+I 3
+E 15
+E 99
+E 80
+E 3
+
+Saída: 
+9
+30
+
